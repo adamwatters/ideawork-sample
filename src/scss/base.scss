@@ -1,3 +1,20 @@
+@font-face {
+  font-family: main;
+  src: url('fonts/ACaslonPro-Regular.otf');
+}
+
+@font-face {
+  font-family: accent;
+  src: url('fonts/Springville-Regular3.otf');
+}
+
+html {
+  font-family: main;
+}
+
 body {
-  background-color: blue;
+  padding-top: $nav-bar-height_mobile;
+  @include media(">phone") {
+    padding-top: $nav-bar-height;
+  }
 }

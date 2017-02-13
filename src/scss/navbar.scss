@@ -1,0 +1,35 @@
+.navbar {
+  position: fixed;
+  top: 0px;
+  line-height: $nav-bar-height_mobile;
+  width: 100%;
+  @include media(">phone") {
+    line-height: $nav-bar-height;
+  }
+}
+
+.navbar-content {
+  @include content-container;
+}
+
+.navbar-logo {
+  vertical-align: middle;
+  height: 36px
+}
+
+.navbar-nav {
+  display: inline-block;
+  float: right;
+}
+
+.navbar-item {
+  font-family: Sans-Serif;
+  margin-left: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $font-accent-color;
+
+  &:hover {
+    color: darken($font-accent-color, 10%)
+  }
+}
