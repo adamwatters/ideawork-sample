@@ -5,9 +5,9 @@ const Tile = ({ article }) => {
   return (
     <article className="tile">
       <img src={imgURL} />
-      <span>{date}</span>
-      <h3>{title}</h3>
-      <span>{`Presented by ${presentedBy}`}</span>
+      <span className="tile-date">{date}</span>
+      <h1 className="tile-title"><a href="#">{title}</a></h1>
+      <span className="tile-byline">Presented by <a href="#">{`${presentedBy}`}</a></span>
     </article>
   );
 };
@@ -64,11 +64,12 @@ class Masonry extends Component{
   }
   
   render(){
+    const style = {width: `${90 / this.state.columns}%`};
     return (
       <div className="masonry" ref="Masonry">
         {this.mapChildren().map((col, ci) => {
           return (
-            <div className="column" key={ci} >
+            <div style={style} className="column" key={ci} >
               {col.map((child, i) => {
                 return <div key={i} >{child}</div>
               })}

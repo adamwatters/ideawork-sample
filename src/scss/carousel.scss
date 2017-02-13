@@ -4,15 +4,10 @@
   line-height: 0;
   background-position: center;
   background-size: cover;
-  @include media(">579px") {
+  @include media(">772px") {
     padding-bottom: 0;
-    height: 435px;
+    height: 580px;
   }
-}
-
-.carousel-item-content {
-  width: 100%;
-  display: inline-block;
 }
 
 .slick-list {

@@ -9,8 +9,6 @@ const CarouselItem = ({ carouselItem }) => {
   }
   return (
     <div style={styles} className='carousel-item'>
-      <div className='carousel-item-content'>
-      </div>
     </div>
   );
 }

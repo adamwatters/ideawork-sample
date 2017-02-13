@@ -22702,6 +22702,10 @@ var _articles = require('./articles');
 
 var _articles2 = _interopRequireDefault(_articles);
 
+var _Footer = require('./Footer');
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var breakPoints = [0, 700];
@@ -22712,13 +22716,14 @@ var App = function App() {
     null,
     _react2.default.createElement(_Nav2.default, null),
     _react2.default.createElement(_Carousel2.default, { carouselItems: _carouselItems2.default }),
-    _react2.default.createElement(_Grid2.default, { articles: _articles2.default, breakPoints: breakPoints })
+    _react2.default.createElement(_Grid2.default, { articles: _articles2.default, breakPoints: breakPoints }),
+    _react2.default.createElement(_Footer2.default, null)
   );
 };
 
 exports.default = App;
 
-},{"./Carousel":196,"./Grid":197,"./Nav":198,"./articles":199,"./carouselItems":200,"react":193}],196:[function(require,module,exports){
+},{"./Carousel":196,"./Footer":197,"./Grid":198,"./Nav":199,"./articles":200,"./carouselItems":201,"react":193}],196:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22746,11 +22751,7 @@ var CarouselItem = function CarouselItem(_ref) {
     backgroundImage: 'url(' + imgURL + ')',
     color: 'white'
   };
-  return _react2.default.createElement(
-    'div',
-    { style: styles, className: 'carousel-item' },
-    _react2.default.createElement('div', { className: 'carousel-item-content' })
-  );
+  return _react2.default.createElement('div', { style: styles, className: 'carousel-item' });
 };
 
 var Carousel = function Carousel(_ref2) {
@@ -22789,6 +22790,53 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  var igLink = _react2.default.createElement(
+    "a",
+    { href: "#" },
+    "Instagram"
+  );
+  var fbLink = _react2.default.createElement(
+    "a",
+    { href: "#" },
+    "Facebook"
+  );
+  var twLink = _react2.default.createElement(
+    "a",
+    { href: "#" },
+    "Twitter"
+  );
+  return _react2.default.createElement(
+    "footer",
+    { className: "footer" },
+    _react2.default.createElement(
+      "span",
+      null,
+      "\xA9 2017 \u2014 Sparta Plaesent - ",
+      igLink,
+      " - ",
+      fbLink,
+      " - ",
+      twLink
+    )
+  );
+};
+
+exports.default = Footer;
+
+},{"react":193}],198:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = require("react");
@@ -22816,18 +22864,27 @@ var Tile = function Tile(_ref) {
     _react2.default.createElement("img", { src: imgURL }),
     _react2.default.createElement(
       "span",
-      null,
+      { className: "tile-date" },
       date
     ),
     _react2.default.createElement(
-      "h3",
-      null,
-      title
+      "h1",
+      { className: "tile-title" },
+      _react2.default.createElement(
+        "a",
+        { href: "#" },
+        title
+      )
     ),
     _react2.default.createElement(
       "span",
-      null,
-      "Presented by " + presentedBy
+      { className: "tile-byline" },
+      "Presented by ",
+      _react2.default.createElement(
+        "a",
+        { href: "#" },
+        "" + presentedBy
+      )
     )
   );
 };
@@ -22899,13 +22956,14 @@ var Masonry = function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var style = { width: 90 / this.state.columns + "%" };
       return _react2.default.createElement(
         "div",
         { className: "masonry", ref: "Masonry" },
         this.mapChildren().map(function (col, ci) {
           return _react2.default.createElement(
             "div",
-            { className: "column", key: ci },
+            { style: style, className: "column", key: ci },
             col.map(function (child, i) {
               return _react2.default.createElement(
                 "div",
@@ -22924,7 +22982,7 @@ var Masonry = function (_Component) {
 
 exports.default = Grid;
 
-},{"react":193}],198:[function(require,module,exports){
+},{"react":193}],199:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -22974,7 +23032,7 @@ var Nav = function Nav() {
 
 exports.default = Nav;
 
-},{"react":193}],199:[function(require,module,exports){
+},{"react":193}],200:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23014,7 +23072,7 @@ var articles = [{
 
 exports.default = articles;
 
-},{}],200:[function(require,module,exports){
+},{}],201:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -23039,7 +23097,7 @@ var carouselItems = [{
 
 exports.default = carouselItems;
 
-},{}],201:[function(require,module,exports){
+},{}],202:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -23058,4 +23116,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 
-},{"./App":195,"react":193,"react-dom":30}]},{},[201]);
+},{"./App":195,"react":193,"react-dom":30}]},{},[202]);
