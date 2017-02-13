@@ -63,7 +63,7 @@
 
 .tile-title {
   margin: 0;
-  font-size: $font-size-medium-small;
+  font-size: 24px;
   @include media(">phone") {
     font-size: $font-size-medium;
   }
