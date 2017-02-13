@@ -1,7 +1,6 @@
 .carousel-item {
   width: 100%;
-  padding-bottom: 75%;
-  line-height: 0;
+  height: 75vw;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -13,7 +12,7 @@
 
 .carousel-content-container {
   position: absolute;
-  top: 20%;
+  top: 15%;
   width: 100%;
   @include media(">phone") {
     top: 36%;
@@ -33,9 +32,13 @@
 }
 
 .carousel-title{
-  font-size: $font-size-medium;
-  line-height: $font-size-medium;
+  font-size: $font-size-medium-small;
+  line-height: $font-size-medium-small;
   margin: 0;
+  @include media(">phone") {
+    font-size: $font-size-medium;
+    line-height: $font-size-medium;
+  }
   @include media(">tablet") {
     font-size: $font-size-xlarge;
     line-height: $font-size-xlarge;
@@ -61,6 +64,18 @@
   line-height: $font-size-small + 10px;
   font-family: accent;
   max-width: 420px;
+}
+
+.slick-dots li button:before { 
+  font-size: 12px;
+  opacity: .10;
+}
+.slick-dots li.slick-active button:before {
+  opacity: .30;
+}
+
+.slick-dots li button:focus:before, .slick-dots li button:hover:before {
+  opacity: .5;
 }
 
 .slick-list {

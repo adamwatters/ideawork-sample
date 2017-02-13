@@ -47,8 +47,11 @@ body {
 
 .navbar-logo {
   vertical-align: middle;
-  height: 24px; }
+  height: 20px; }
   @media (min-width: 580px) {
+    .navbar-logo {
+      height: 24px; } }
+  @media (min-width: 821px) {
     .navbar-logo {
       height: 36px; } }
 
@@ -56,20 +59,31 @@ body {
   display: inline-block;
   float: right; }
 
+.navbar-hamburger {
+  height: 16px;
+  width: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  background: linear-gradient(to bottom, #767676 0%, #767676 10%, transparent 10%, transparent 45%, #767676 45%, #767676 55%, transparent 55%, transparent 90%, #767676 90%, #767676 100%); }
+  .navbar-hamburger:hover {
+    background: linear-gradient(to bottom, #434343 0%, #434343 10%, transparent 10%, transparent 45%, #434343 45%, #434343 55%, transparent 55%, transparent 90%, #434343 90%, #434343 100%); }
+
 .navbar-item {
   font-family: Sans-Serif;
-  margin-left: 20px;
+  margin-left: 12px;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 11px;
   color: #767676; }
+  @media (min-width: 580px) {
+    .navbar-item {
+      margin-left: 20px; } }
   .navbar-item:hover {
-    color: #5d5c5c; }
+    color: #434343; }
 
 .carousel-item {
   width: 100%;
-  padding-bottom: 75%;
-  line-height: 0;
+  height: 75vw;
   background-position: center;
   background-size: cover;
   position: relative; }
@@ -80,7 +94,7 @@ body {
 
 .carousel-content-container {
   position: absolute;
-  top: 20%;
+  top: 15%;
   width: 100%; }
   @media (min-width: 580px) {
     .carousel-content-container {
@@ -100,9 +114,13 @@ body {
       padding-right: 0px; } }
 
 .carousel-title {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 30px;
+  line-height: 30px;
   margin: 0; }
+  @media (min-width: 580px) {
+    .carousel-title {
+      font-size: 36px;
+      line-height: 36px; } }
   @media (min-width: 821px) {
     .carousel-title {
       font-size: 60px;
@@ -126,6 +144,16 @@ body {
   line-height: 28px;
   font-family: accent;
   max-width: 420px; }
+
+.slick-dots li button:before {
+  font-size: 12px;
+  opacity: .10; }
+
+.slick-dots li.slick-active button:before {
+  opacity: .30; }
+
+.slick-dots li button:focus:before, .slick-dots li button:hover:before {
+  opacity: .5; }
 
 .slick-list {
   width: 100%;

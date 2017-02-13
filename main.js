@@ -22787,8 +22787,8 @@ var Carousel = function Carousel(_ref2) {
   var settings = {
     dots: true,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 5000,
+    autoplay: true,
+    autoplaySpeed: 5000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -23047,11 +23047,7 @@ var Nav = function Nav() {
           { className: 'navbar-item', href: '#' },
           'Login'
         ),
-        _react2.default.createElement(
-          'a',
-          { className: 'navbar-item', href: '#' },
-          'H'
-        )
+        _react2.default.createElement('a', { className: 'navbar-hamburger navbar-item', href: '#' })
       )
     )
   );

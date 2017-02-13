@@ -24,8 +24,11 @@
 
 .navbar-logo {
   vertical-align: middle;
-  height: 24px;
+  height: 20px;
   @include media(">phone") {
+    height: 24px;
+  }
+  @include media(">tablet") {
     height: 36px;
   }
 }
@@ -35,15 +38,30 @@
   float: right;
 }
 
+.navbar-hamburger {
+  height:16px;
+  width:24px;
+  display: inline-block;
+  vertical-align: middle;
+  &:hover {
+    background:linear-gradient(to bottom, darken($font-color-accent, 20%) 0%, darken($font-color-accent, 20%) 10%, transparent 10%, transparent 45%, darken($font-color-accent, 20%) 45%, darken($font-color-accent, 20%) 55%, transparent 55%, transparent 90%, darken($font-color-accent, 20%) 90%, darken($font-color-accent, 20%) 100%);
+  }
+  background:linear-gradient(to bottom, $font-color-accent 0%, $font-color-accent 10%, transparent 10%, transparent 45%, $font-color-accent 45%, $font-color-accent 55%, transparent 55%, transparent 90%, $font-color-accent 90%, $font-color-accent 100%);
+}
+
 .navbar-item {
   font-family: Sans-Serif;
-  margin-left: 20px;
+  margin-left: 12px;
   text-transform: uppercase;
   text-decoration: none;
   font-size: $font-size-xsmall;
   color: $font-color-accent;
 
+  @include media(">phone") {
+    margin-left: 20px;
+  }
+
   &:hover {
-    color: darken($font-color-accent, 10%)
+    color: darken($font-color-accent, 20%)
   }
 }
