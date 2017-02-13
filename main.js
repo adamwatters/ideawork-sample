@@ -23005,7 +23005,7 @@ var Nav = function Nav() {
       _react2.default.createElement(
         'a',
         { href: '#' },
-        _react2.default.createElement('img', { className: 'navbar-logo', src: '/logo.svg', alt: 'Sparta Plaesent' })
+        _react2.default.createElement('img', { className: 'navbar-logo', src: 'img/logo.svg', alt: 'Sparta Plaesent' })
       ),
       _react2.default.createElement(
         'div',

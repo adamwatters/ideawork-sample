@@ -77,10 +77,6 @@ body {
       padding-bottom: 0;
       height: 580px; } }
 
-.carousel-item-img {
-  width: 100%;
-  display: inline-block; }
-
 .slick-list {
   width: 100%;
   margin: 0 auto;
