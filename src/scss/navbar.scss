@@ -5,18 +5,28 @@
   width: 100%;
   z-index: 100;
   background-color: white;
+  padding-left: 16px;
+  padding-right: 16px;
   @include media(">phone") {
     line-height: $nav-bar-height;
+  }
+
+  @include media(">desktop") {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 .navbar-content {
-  @include content-container;
+  @include main-content-container;
 }
 
 .navbar-logo {
   vertical-align: middle;
-  height: 36px
+  height: 24px;
+  @include media(">phone") {
+    height: 36px;
+  }
 }
 
 .navbar-nav {
@@ -26,9 +36,10 @@
 
 .navbar-item {
   font-family: Sans-Serif;
-  margin-left: 12px;
+  margin-left: 20px;
   text-transform: uppercase;
   text-decoration: none;
+  font-size: 12px;
   color: $font-accent-color;
 
   &:hover {

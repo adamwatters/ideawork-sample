@@ -10,9 +10,6 @@ const CarouselItem = ({ carouselItem }) => {
   return (
     <div style={styles} className='carousel-item'>
       <div className='carousel-item-content'>
-        <h2>{title}</h2>
-        <div>{date}</div>
-        <div>{description}</div>
       </div>
     </div>
   );
@@ -22,6 +19,8 @@ const Carousel = ({ carouselItems }) => {
   const settings = {
     dots: true,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

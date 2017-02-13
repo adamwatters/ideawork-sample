@@ -1,14 +1,22 @@
 // set breakpoints for include_media mixins
-$breakpoints: (phone: 500px, tablet: 768px, desktop: 1024px);
+$breakpoints: (phone: 579px, tablet: 768px, desktop: 1440px);
 
 $font-accent-color: rgb(118,118,118);
 
 // content container mixin for site content max-width
-$content-max-width: 1000px;
-@mixin content-container {
+$wide-content-max-width: 1440px;
+$main-content-max-width: $wide-content-max-width - 290px;
+
+@mixin wide-content-container {
   width: 100%;
   margin: 0 auto;
-  max-width: $content-max-width;
+  max-width: $wide-content-max-width;
+}
+
+@mixin main-content-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: $main-content-max-width;
 }
 
 // heights for nav-bar line height and body padding to account for fixed navbar  

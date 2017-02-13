@@ -1,0 +1,112 @@
+@font-face {
+  font-family: main;
+  src: url("fonts/ACaslonPro-Regular.otf"); }
+
+@font-face {
+  font-family: accent;
+  src: url("fonts/Springville-Regular3.otf"); }
+
+html {
+  font-family: main;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  padding-top: 50px; }
+  @media (min-width: 580px) {
+    body {
+      padding-top: 120px; } }
+
+.navbar {
+  position: fixed;
+  top: 0px;
+  line-height: 50px;
+  width: 100%;
+  z-index: 100;
+  background-color: white;
+  padding-left: 16px;
+  padding-right: 16px; }
+  @media (min-width: 580px) {
+    .navbar {
+      line-height: 120px; } }
+  @media (min-width: 1441px) {
+    .navbar {
+      padding-left: 0px;
+      padding-right: 0px; } }
+
+.navbar-content {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1150px; }
+
+.navbar-logo {
+  vertical-align: middle;
+  height: 24px; }
+  @media (min-width: 580px) {
+    .navbar-logo {
+      height: 36px; } }
+
+.navbar-nav {
+  display: inline-block;
+  float: right; }
+
+.navbar-item {
+  font-family: Sans-Serif;
+  margin-left: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 12px;
+  color: #767676; }
+  .navbar-item:hover {
+    color: #5d5c5c; }
+
+.carousel-item {
+  width: 100%;
+  padding-bottom: 75%;
+  line-height: 0;
+  background-position: center;
+  background-size: cover; }
+  @media (min-width: 580px) {
+    .carousel-item {
+      padding-bottom: 0;
+      height: 435px; } }
+
+.carousel-item-content {
+  width: 100%;
+  display: inline-block; }
+
+.slick-list {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px; }
+
+.masonry-container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1150px;
+  margin-top: 50px; }
+
+.masonry {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: stretch;
+  width: 100%;
+  margin: auto; }
+
+.column {
+  padding-right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: stretch;
+  flex-grow: 1; }
+  .column:nth-child(1) {
+    padding-left: 2%; }
+
+.tile img {
+  width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

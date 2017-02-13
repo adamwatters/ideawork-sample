@@ -10,6 +10,11 @@
 
 html {
   font-family: main;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -17,5 +22,4 @@ body {
   @include media(">phone") {
     padding-top: $nav-bar-height;
   }
-  height: 2000px;
 }
