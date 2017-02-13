@@ -22748,10 +22748,37 @@ var CarouselItem = function CarouselItem(_ref) {
       description = carouselItem.description;
 
   var styles = {
-    backgroundImage: 'url(' + imgURL + ')',
-    color: 'white'
+    backgroundImage: 'url(' + imgURL + ')'
   };
-  return _react2.default.createElement('div', { style: styles, className: 'carousel-item' });
+  return _react2.default.createElement(
+    'div',
+    { style: styles, className: 'carousel-item' },
+    _react2.default.createElement(
+      'div',
+      { className: 'carousel-content-container' },
+      _react2.default.createElement(
+        'article',
+        { className: 'carousel-content' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'carousel-title' },
+          title.slice(0, 10),
+          _react2.default.createElement('br', null),
+          title.slice(11)
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'carousel-date' },
+          date
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'carousel-description' },
+          description
+        )
+      )
+    )
+  );
 };
 
 var Carousel = function Carousel(_ref2) {
@@ -22760,8 +22787,8 @@ var Carousel = function Carousel(_ref2) {
   var settings = {
     dots: true,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

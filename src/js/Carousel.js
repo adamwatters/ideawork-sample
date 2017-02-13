@@ -5,10 +5,16 @@ const CarouselItem = ({ carouselItem }) => {
   const { imgURL, title, date, description } = carouselItem
   const styles = {
     backgroundImage: `url(${imgURL})`,
-    color: 'white',
   }
   return (
     <div style={styles} className='carousel-item'>
+      <div className='carousel-content-container'>
+        <article className='carousel-content'>
+          <h1 className='carousel-title'>{title.slice(0,10)}<br/>{title.slice(11)}</h1>
+          <div className='carousel-date'>{date}</div>
+          <div className='carousel-description'>{description}</div>
+        </article>
+      </div>
     </div>
   );
 }
@@ -17,8 +23,8 @@ const Carousel = ({ carouselItems }) => {
   const settings = {
     dots: true,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

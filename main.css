@@ -71,11 +71,61 @@ body {
   padding-bottom: 75%;
   line-height: 0;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
   @media (min-width: 773px) {
     .carousel-item {
       padding-bottom: 0;
       height: 580px; } }
+
+.carousel-content-container {
+  position: absolute;
+  top: 20%;
+  width: 100%; }
+  @media (min-width: 580px) {
+    .carousel-content-container {
+      top: 36%; } }
+
+.carousel-content {
+  color: white;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1150px;
+  padding-left: 16px;
+  padding-right: 16px; }
+  @media (min-width: 1441px) {
+    .carousel-content {
+      padding-left: 0px;
+      padding-right: 0px; } }
+
+.carousel-title {
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0; }
+  @media (min-width: 821px) {
+    .carousel-title {
+      font-size: 60px;
+      line-height: 60px; } }
+
+.carousel-date {
+  font-size: 18px;
+  line-height: 18px;
+  font-family: accent;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+  @media (min-width: 821px) {
+    .carousel-date {
+      font-size: 30px;
+      line-height: 30px;
+      padding-top: 24px;
+      padding-bottom: 24px; } }
+
+.carousel-description {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: accent;
+  max-width: 420px; }
 
 .slick-list {
   width: 100%;
@@ -141,7 +191,7 @@ body {
 
 .tile-title {
   margin: 0;
-  font-size: 24px; }
+  font-size: 30px; }
   @media (min-width: 580px) {
     .tile-title {
       font-size: 36px; } }
@@ -149,6 +199,7 @@ body {
     .tile-title {
       font-size: 48px; } }
   .tile-title a {
+    color: black;
     text-decoration: none; }
     .tile-title a:hover {
       text-decoration: underline; }
@@ -159,6 +210,7 @@ body {
   padding-top: 20px;
   padding-bottom: 20px; }
   .tile-byline a {
+    color: black;
     text-transform: uppercase; }
 
 .footer {

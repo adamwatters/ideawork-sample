@@ -4,10 +4,63 @@
   line-height: 0;
   background-position: center;
   background-size: cover;
+  position: relative;
   @include media(">772px") {
     padding-bottom: 0;
     height: 580px;
   }
+}
+
+.carousel-content-container {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  @include media(">phone") {
+    top: 36%;
+  }
+}
+
+.carousel-content {
+  color: white;
+  position: relative;
+  @include main-content-container;
+  padding-left: 16px;
+  padding-right: 16px;
+  @include media(">1440px") {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.carousel-title{
+  font-size: $font-size-medium;
+  line-height: $font-size-medium;
+  margin: 0;
+  @include media(">tablet") {
+    font-size: $font-size-xlarge;
+    line-height: $font-size-xlarge;
+  }
+}
+
+.carousel-date{
+  font-size: $font-size-small;
+  line-height: $font-size-small;
+  font-family: accent;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include media(">tablet") {
+    font-size: $font-size-medium-small;
+    line-height: $font-size-medium-small;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.carousel-description{
+  font-size: $font-size-small;
+  line-height: $font-size-small + 10px;
+  font-family: accent;
+  max-width: 420px;
 }
 
 .slick-list {
