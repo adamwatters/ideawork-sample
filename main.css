@@ -89,7 +89,6 @@ body {
   position: relative; }
   @media (min-width: 773px) {
     .carousel-item {
-      padding-bottom: 0;
       height: 580px; } }
 
 .carousel-content-container {

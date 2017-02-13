@@ -22787,9 +22787,9 @@ var Carousel = function Carousel(_ref2) {
   var settings = {
     dots: true,
     infinite: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    speed: 500,
+    // autoplay: true,
+    // autoplaySpeed: 5000,
+    // speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false
