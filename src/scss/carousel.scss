@@ -1,0 +1,19 @@
+.carousel-item {
+  width: 100%;
+  background-position: center;
+  background-size: fill;
+}
+
+.carousel-item-content {
+  box-sizing: border-box;
+  height: 400px;
+  width: 100%;
+  padding-top: 150px;
+  padding-left: 50px;
+  padding-right: 50%;
+  display: inline-block;
+}
+
+.slick-list {
+  @include content-container;
+}

@@ -3,6 +3,8 @@
   top: 0px;
   line-height: $nav-bar-height_mobile;
   width: 100%;
+  z-index: 100;
+  background-color: white;
   @include media(">phone") {
     line-height: $nav-bar-height;
   }

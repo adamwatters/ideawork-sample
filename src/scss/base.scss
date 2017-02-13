@@ -17,4 +17,5 @@ body {
   @include media(">phone") {
     padding-top: $nav-bar-height;
   }
+  height: 2000px;
 }

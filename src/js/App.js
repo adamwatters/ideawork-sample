@@ -1,11 +1,13 @@
 import React from 'react'
 import Nav from './Nav';
+import Carousel from './Carousel';
+import carouselItems from './carouselItems';
 
 const App = () => {
   return (
     <span>
       <Nav />
-      <main>main content</main>
+      <Carousel carouselItems={carouselItems}/>
     </span>
   )
 }
