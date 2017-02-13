@@ -3,24 +3,16 @@
   height: 75vw;
   background-position: center;
   background-size: cover;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   @include media(">772px") {
     height: 580px;
   }
 }
 
-.carousel-content-container {
-  position: absolute;
-  top: 15%;
-  width: 100%;
-  @include media(">phone") {
-    top: 36%;
-  }
-}
-
 .carousel-content {
   color: white;
-  position: relative;
   @include main-content-container;
   padding-left: 16px;
   padding-right: 16px;

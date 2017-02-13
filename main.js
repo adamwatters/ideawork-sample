@@ -22754,28 +22754,24 @@ var CarouselItem = function CarouselItem(_ref) {
     'div',
     { style: styles, className: 'carousel-item' },
     _react2.default.createElement(
-      'div',
-      { className: 'carousel-content-container' },
+      'article',
+      { className: 'carousel-content' },
       _react2.default.createElement(
-        'article',
-        { className: 'carousel-content' },
-        _react2.default.createElement(
-          'h1',
-          { className: 'carousel-title' },
-          title.slice(0, 10),
-          _react2.default.createElement('br', null),
-          title.slice(11)
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'carousel-date' },
-          date
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'carousel-description' },
-          description
-        )
+        'h1',
+        { className: 'carousel-title' },
+        title.slice(0, 10),
+        _react2.default.createElement('br', null),
+        title.slice(11)
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'carousel-date' },
+        date
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'carousel-description' },
+        description
       )
     )
   );

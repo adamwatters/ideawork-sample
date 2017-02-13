@@ -8,13 +8,11 @@ const CarouselItem = ({ carouselItem }) => {
   }
   return (
     <div style={styles} className='carousel-item'>
-      <div className='carousel-content-container'>
-        <article className='carousel-content'>
-          <h1 className='carousel-title'>{title.slice(0,10)}<br/>{title.slice(11)}</h1>
-          <div className='carousel-date'>{date}</div>
-          <div className='carousel-description'>{description}</div>
-        </article>
-      </div>
+      <article className='carousel-content'>
+        <h1 className='carousel-title'>{title.slice(0,10)}<br/>{title.slice(11)}</h1>
+        <div className='carousel-date'>{date}</div>
+        <div className='carousel-description'>{description}</div>
+      </article>
     </div>
   );
 }
